@@ -1,0 +1,31 @@
+/*The program must accept two string values s1 and s2 of equal length.the program must consider every character in the string s2 and replace the character being considered 
+with the corresponding character which is in the same position in s1.finally print the modified string as output
+ 
+ input: money agile
+ output: mgile aoile agnle agiee agily
+ 
+ input: computer vertical
+ output: certical vortical vemtical verpical vertucal verticel verticar  */
+ 
+ #include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[1000],str1[1000];
+    scanf("%s %s",str,str1);
+    int i,j;
+    for(i=0;i<strlen(str);i++){
+        for(j=0;j<strlen(str1);j++){
+            if(i==j){
+                printf("%c",str[i]);
+            }
+            else{
+                printf("%c",str1[j]);
+            }
+            
+        }
+        printf(" ");
+    }
+}
+
+ 
