@@ -1,0 +1,49 @@
+the program must accept a string s as the input. the program must print the alphabets in the string s which have occured odd number of times in the alphabetical order.
+then the program must print the alphabets in the string s which have occured even number of times in the reversed alphabets order
+
+input:
+bananaleaf
+
+output:
+beflna
+
+explanation:
+The aphabet b has occurred 1 time
+The aphabet a has occurred 4 times
+The aphabet n has occurred 2 times
+The aphabet l has occurred 1 time
+The aphabet e has occurred 1 time
+The aphabet f has occurred 1 time
+the alphabets b l e f have occured odd number of times.so they are printed in alphabetical order as belf
+the alphabets a n have occured even number of times.so they are printed in alphabetical order as na
+
+input:
+engineeringmathematics
+
+output:
+chinrstmgea
+
+program:
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+char s[10000];
+scanf("%s",&s);
+int a[124]={0};
+for(int i=0;i<strlen(s);i++){
+    a[s[i]]++;
+}
+for(int i=96;i<123;i++){
+    if(a[i]>0&&a[i]%2!=0){
+        printf("%c",i);
+    }
+}
+for(int i=123;i>96;i--){
+    if(a[i]>0&&a[i]%2==0){
+        printf("%c",i);
+    }
+}
+}
